@@ -1,0 +1,35 @@
+{
+  "name": "stringulate",
+  "version": "0.0.0",
+  "description": "Tools for building internationalised templates",
+  "main": "index.js",
+  "scripts": {
+    "hooks": "chmod +x hooks/*; cd .git/hooks && ln -sf ../../hooks/* .",
+    "lint": "./node_modules/jshint/bin/jshint ./",
+    "jscs": "./node_modules/jscs/bin/jscs ./",
+    "unit": "./node_modules/mocha/bin/mocha test",
+    "test": "npm run lint && npm run jscs && npm run unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattyod/stringulate.git"
+  },
+  "keywords": [ "i18n", "strings", "templates" ],
+  "author": "mattyod <mattyod@gmail.com> (http://www.mtod.co.uk/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattyod/gstringulate/issues"
+  },
+  "homepage": "https://github.com/mattyod/stringulate",
+  "dependencies": {
+    "underscore": "1.6.0"
+  },
+  "devDependencies": {
+    "jshint": "2.5.1",
+    "jscs": "1.5.8",
+    "mocha": "1.20.1",
+    "chai": "1.9.1",
+    "sinon": "1.10.2",
+    "sinon-chai": "2.5.0"
+  }
+}
