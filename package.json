@@ -1,8 +1,9 @@
 {
-  "name": "stringulate",
+  "name": "stringle",
   "version": "0.0.0",
   "description": "Tools for building internationalised templates",
-  "main": "index.js",
+  "main": "bin/stringulate.js",
+
   "scripts": {
     "hooks": "chmod +x hooks/*; cd .git/hooks && ln -sf ../../hooks/* .",
     "lint": "./node_modules/jshint/bin/jshint ./",
@@ -22,7 +23,10 @@
   },
   "homepage": "https://github.com/mattyod/stringulate",
   "dependencies": {
-    "underscore": "1.6.0"
+    "underscore": "1.6.0",
+    "bluebird": "2.2.2",
+    "deep-extend": "0.2.10",
+    "col": "0.1.0"
   },
   "devDependencies": {
     "jshint": "2.5.1",
@@ -30,6 +34,7 @@
     "mocha": "1.20.1",
     "chai": "1.9.1",
     "sinon": "1.10.2",
-    "sinon-chai": "2.5.0"
+    "sinon-chai": "2.5.0",
+    "chai-as-promised": "4.1.1"
   }
 }
