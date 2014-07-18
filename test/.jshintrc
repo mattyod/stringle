@@ -4,7 +4,9 @@
     "afterEach",
     "describe",
     "it",
-    "sandbox"
+    "sandbox",
+    "configPath",
+    "after"
   ],
 
   "node": true,

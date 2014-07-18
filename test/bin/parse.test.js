@@ -1,10 +1,7 @@
 'use strict';
 
 var parse = require('../../bin/parse'),
-    Promise = require('bluebird'),
     path = require('path');
-
-Promise.promisifyAll(require('fs'));
 
 var map = {
   test1: path.join(__dirname, '../mockFiles/templates/test1'),
@@ -46,10 +43,6 @@ var expected = {
 };
 
 describe('bin/parse', sandbox(function () {
-
-  beforeEach(function () {
-
-  });
 
   it('parses strings from the templates', function () {
     return parse(map).should.become(expected);

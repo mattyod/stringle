@@ -35,6 +35,7 @@
     "chai": "1.9.1",
     "sinon": "1.10.2",
     "sinon-chai": "2.5.0",
+    "sinon-as-promised": "0.0.4",
     "chai-as-promised": "4.1.1"
   }
 }

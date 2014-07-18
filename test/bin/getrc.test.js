@@ -1,7 +1,6 @@
 'use strict';
 
 var getrc = require('../../bin/getrc'),
-    Promise = require('bluebird'),
     fs = require('fs');
 
 var rc = {
@@ -22,10 +21,11 @@ var expected = {
 describe('bin/getrc', sandbox(function () {
 
   beforeEach(function () {
-    sandbox.stub(fs,'readFileAsync').returns(
-      new Promise(function (resolve) {
-        resolve(JSON.stringify(rc));
-      }));
+    // Ensure we have a clean config
+    delete require.cache[configPath];
+
+    sandbox.stub(fs,'readFileAsync').resolves(JSON.stringify(rc));
+
   });
 
   it('it extends the config with .rc values', function () {
