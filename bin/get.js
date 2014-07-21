@@ -2,7 +2,8 @@
 
 var map = require('./map'),
     parse = require('./parse'),
-    extend = require('./extend');
+    extend = require('./extend'),
+    build = require('./build');
 
 module.exports = function (config) {
 
@@ -15,8 +16,7 @@ module.exports = function (config) {
     })
     .then(extend)
     .then(function (files) {
-      console.log(mapping);
-      console.log(files);
+      build(mapping, files);
     });
 
 };

@@ -47,7 +47,6 @@ var file = {
 // msgids should remain intact
 // msgstrs should remain intact
 // comments should remain intact
-
 var expected = [
   {
     foo: {

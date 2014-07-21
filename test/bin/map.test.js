@@ -1,10 +1,7 @@
 'use strict';
 
 var map = require('../../bin/map'),
-    Promise = require('bluebird'),
     path = require('path');
-
-Promise.promisifyAll(require('fs'));
 
 var expected = {
   test1: path.join(__dirname, '../mockFiles/templates/test1'),

@@ -26,7 +26,8 @@
     "underscore": "1.6.0",
     "bluebird": "2.2.2",
     "deep-extend": "0.2.10",
-    "col": "0.1.0"
+    "col": "0.1.0",
+    "rimraf": "2.2.8"
   },
   "devDependencies": {
     "jshint": "2.5.1",

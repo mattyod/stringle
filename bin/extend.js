@@ -1,6 +1,7 @@
 'use strict';
 
 var config = require('./config'),
+    checkSetDir = require('./checkSetDir'),
     fs = require('fs'),
     Promise = require('bluebird'),
     path = require('path'),
@@ -58,6 +59,7 @@ module.exports = function (json) {
         })
         .then(function (file) {
           var out = JSON.stringify(file, null, config.indent);
+
           return fs.writeFileAsync(filePath, out)
             .then(function () {
               file._locale = locale;
@@ -81,18 +83,9 @@ module.exports = function (json) {
     return Promise.all(promises);
   };
 
-  var checkSetDir = function (dir) {
-    return fs.statAsync(dir)
-      .catch(function () {
-        return fs.mkdirAsync(dir)
-          .catch(function (err) {
-            log.error(err);
-          });
-      });
-  };
-
   return checkSetDir(path.join(process.cwd(), config.target))
     .then(checkSetLocales)
-    .then(extend);
+    .then(extend)
+    .catch(log.error);
 
 };

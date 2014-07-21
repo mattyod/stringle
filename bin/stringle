@@ -6,7 +6,6 @@ var getrc = require('./getrc'),
     get = require('./get'),
     Promise = require('bluebird');
 
-
 Promise.promisifyAll(require('fs'));
 
 getrc(require('./config'))
