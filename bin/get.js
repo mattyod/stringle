@@ -9,7 +9,7 @@ module.exports = function (config) {
 
   var mapping = {};
 
-  map(config.src)
+  return map(config.src)
     .then(function (map) {
       mapping = JSON.parse(JSON.stringify(map));
       return parse(map);
@@ -17,6 +17,7 @@ module.exports = function (config) {
     .then(extend)
     .then(function (files) {
       build(mapping, files);
+      return config;
     });
 
 };

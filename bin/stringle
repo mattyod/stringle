@@ -4,9 +4,13 @@
 
 var getrc = require('./getrc'),
     get = require('./get'),
-    Promise = require('bluebird');
+    Promise = require('bluebird'),
+    log = require('col');
 
 Promise.promisifyAll(require('fs'));
 
 getrc(require('./config'))
-  .then(get);
+  .then(get)
+  .then(function(config) {
+    log.success('Templates built for', config.locales);
+  });
