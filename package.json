@@ -1,9 +1,8 @@
 {
   "name": "stringle",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tools for building internationalised templates",
-  "main": "bin/stringulate.js",
-
+  "main": "bin/stringle.js",
   "scripts": {
     "hooks": "chmod +x hooks/*; cd .git/hooks && ln -sf ../../hooks/* .",
     "lint": "./node_modules/jshint/bin/jshint ./",
@@ -13,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattyod/stringulate.git"
+    "url": "https://github.com/mattyod/stringle.git"
   },
   "keywords": [ "i18n", "strings", "templates" ],
   "author": "mattyod <mattyod@gmail.com> (http://www.mtod.co.uk/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mattyod/gstringulate/issues"
+    "url": "https://github.com/mattyod/stringle/issues"
   },
-  "homepage": "https://github.com/mattyod/stringulate",
+  "homepage": "https://github.com/mattyod/stringle",
   "dependencies": {
     "underscore": "1.6.0",
     "bluebird": "2.2.2",
