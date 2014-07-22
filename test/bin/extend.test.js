@@ -84,7 +84,7 @@ var expected = [
   }
 ];
 
-var target = config.target = '../mockFiles/translations';
+var target = config.translations = '../mockFiles/translations';
 var locales = config.locales = ['foo', 'bar'];
 
 describe('bin/extend', sandbox(function () {

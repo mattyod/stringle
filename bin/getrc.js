@@ -6,7 +6,7 @@ var path = require('path'),
 
 module.exports = function (config) {
 
-  return fs.readFileAsync(path.join(process.cwd(), '.stringlerc'), 'utf8')
+  return fs.readFileAsync(path.join(process.cwd(), '.stringtingrc'), 'utf8')
     .then(function (file) {
       _.extend(config, JSON.parse(file));
       return config;

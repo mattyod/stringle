@@ -1,8 +1,8 @@
 {
-  "name": "stringle",
-  "version": "0.0.2",
+  "name": "stringting",
+  "version": "0.0.3",
   "description": "Tools for building internationalised templates",
-  "main": "bin/stringle.js",
+  "main": "bin/stringting.js",
   "scripts": {
     "hooks": "chmod +x hooks/*; cd .git/hooks && ln -sf ../../hooks/* .",
     "lint": "./node_modules/jshint/bin/jshint ./",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattyod/stringle.git"
+    "url": "https://github.com/mattyod/stringting.git"
   },
   "keywords": [ "i18n", "strings", "templates" ],
   "author": "mattyod <mattyod@gmail.com> (http://www.mtod.co.uk/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mattyod/stringle/issues"
+    "url": "https://github.com/mattyod/stringting/issues"
   },
-  "homepage": "https://github.com/mattyod/stringle",
+  "homepage": "https://github.com/mattyod/stringting",
   "dependencies": {
     "underscore": "1.6.0",
     "bluebird": "2.2.2",

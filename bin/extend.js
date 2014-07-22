@@ -45,7 +45,7 @@ module.exports = function (json) {
     var promises = [];
 
     config.locales.forEach(function (locale) {
-      var filePath = path.join(process.cwd(), config.target, locale, config.name);
+      var filePath = path.join(process.cwd(), config.translations, locale, config.name);
 
       promises.push(fs.readFileAsync(filePath)
         .then(function (file) {
@@ -75,7 +75,7 @@ module.exports = function (json) {
     var promises = [];
 
     config.locales.forEach(function (locale) {
-      var dir = path.join(process.cwd(), config.target, locale);
+      var dir = path.join(process.cwd(), config.translations, locale);
 
       promises.push(checkSetDir(dir));
     });
@@ -83,7 +83,7 @@ module.exports = function (json) {
     return Promise.all(promises);
   };
 
-  return checkSetDir(path.join(process.cwd(), config.target))
+  return checkSetDir(path.join(process.cwd(), config.translations))
     .then(checkSetLocales)
     .then(extend)
     .catch(log.error);

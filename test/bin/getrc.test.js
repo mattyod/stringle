@@ -5,7 +5,7 @@ var getrc = require('../../bin/getrc'),
 
 var rc = {
   src: 'src/templates',
-  target: 'src/translations'
+  translations: 'src/translations'
 };
 
 var expected = {
@@ -15,7 +15,7 @@ var expected = {
   close: ')',
   regexp: '__\\(.*?\\)',
   src: 'src/templates',
-  target: 'src/translations'
+  translations: 'src/translations'
 };
 
 describe('bin/getrc', sandbox(function () {
