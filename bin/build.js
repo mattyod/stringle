@@ -43,13 +43,14 @@ module.exports = function (map, files) {
       if (typeof val === 'string') {
         promises.push(
           fs.readFileAsync(val, 'utf8')
-          .then(function (template) {
-            var fileName = path.basename(val);
-            var dest = path.join(views, fileName);
-            var newFile = parse(template, file);
+            .then(function (template) {
+              var fileName = path.basename(val);
+              var dest = path.join(views, fileName);
+              var newFile = parse(template, file);
 
-            return fs.writeFileAsync(dest, newFile);
-          }));
+              return fs.writeFileAsync(dest, newFile);
+            })
+        );
       } else {
         var newView = path.join(views, key);
 
@@ -67,17 +68,19 @@ module.exports = function (map, files) {
     var promises = [],
         views = path.join(process.cwd(), config.templates);
 
-    promises.push(rmrf(views)
-      .then(function () {
-        return fs.mkdirAsync(views);
-      })
-      .then(function () {
-        return files.forEach(function (file) {
-          var dest = path.join(views, file._locale);
-          return fs.mkdirAsync(dest)
-            .then(itterate(map, file, dest));
-        });
-      }));
+    promises.push(
+      rmrf(views)
+        .then(function () {
+          return fs.mkdirAsync(views);
+        })
+        .then(function () {
+          return files.forEach(function (file) {
+            var dest = path.join(views, file._locale);
+            return fs.mkdirAsync(dest)
+              .then(itterate(map, file, dest));
+          });
+        })
+    );
 
     return Promise.all(promises);
   };
