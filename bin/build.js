@@ -16,8 +16,11 @@ module.exports = function (map, files) {
     var regexp = new RegExp(config.regexp, 'g');
 
     template.split('\n').forEach(function (line) {
-      var obj = file;
+      var obj;
+
       newFile += line.replace(regexp, function (matcher) {
+        obj = file;
+
         matcher = matcher
           .replace(config.open, '')
           .replace(config.close, '')

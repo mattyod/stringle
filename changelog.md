@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.5
+_31/07/2014_
+
+* Fixed build issue with multiple refs on a single line
+
 ## 0.0.4
 _23/07/2014_
 
