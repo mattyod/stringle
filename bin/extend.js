@@ -58,7 +58,7 @@ module.exports = function (json) {
           return itterate(file, json);
         })
         .then(function (file) {
-          var out = JSON.stringify(file, null, config.indent);
+          var out = JSON.stringify(file, null, config.indent) + '\n';
 
           return fs.writeFileAsync(filePath, out)
             .then(function () {
