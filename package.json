@@ -1,6 +1,6 @@
 {
   "name": "stringting",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Tools for building internationalised templates",
   "main": "bin/stringting.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/mattyod/stringting",
   "dependencies": {
-    "underscore": "1.6.0",
+    "underscore": "1.7.0",
     "bluebird": "2.2.2",
     "deep-extend": "0.2.10",
     "col": "0.1.0",

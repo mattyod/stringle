@@ -137,8 +137,12 @@ describe('bin/extend', sandbox(function () {
       }).catch(done);
   });
 
-  it('return the extended translations for each locale', function () {
-    extend(json).should.become(expected);
+  it('return the extended translations for each locale', function (done) {
+    extend(json)
+      .then(function (json) {
+        json.should.deep.equal(expected);
+        done();
+      }).catch(done);
   });
 
 }));

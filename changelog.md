@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.7
+_11/09/2014_
+
+* Underscore version update.
+* Fixed an intermittently failing test.
+
 ## 0.0.6
 _06/08/2014_
 
