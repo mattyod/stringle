@@ -1,5 +1,10 @@
 # Changelog
 
+# 0.0.8
+_11/09/2014_
+
+* File locations are now sorted providing consistent translation files.
+
 ## 0.0.7
 _11/09/2014_
 

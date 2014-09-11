@@ -28,6 +28,12 @@ module.exports = function (map) {
         obj[key].comments = obj[key].comments || '';
 
         obj[key].locations.push(location);
+        obj[key].locations.sort(function (a, b) {
+          a = a.split(':');
+          b = b.split(':');
+
+          return a[0].localeCompare(b[0]) || (a[1] - b[1]);
+        });
       }
     };
 

@@ -1,6 +1,6 @@
 {
   "name": "stringting",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Tools for building internationalised templates",
   "main": "bin/stringting.js",
   "scripts": {
