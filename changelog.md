@@ -1,5 +1,12 @@
 # Changelog
 
+# 0.0.9
+_25/09/2014_
+
+* Fixed multiple sub folders glitch.
+* Renamed Promise var in multiple cases.
+* Dependencies update.
+
 # 0.0.8
 _11/09/2014_
 

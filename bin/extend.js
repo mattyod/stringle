@@ -3,7 +3,7 @@
 var config = require('./config'),
     checkSetDir = require('./checkSetDir'),
     fs = require('fs'),
-    Promise = require('bluebird'),
+    Bluebird = require('bluebird'),
     path = require('path'),
     log = require('col'),
     _ = require('underscore');
@@ -68,7 +68,7 @@ module.exports = function (json) {
         }));
     });
 
-    return Promise.all(promises);
+    return Bluebird.all(promises);
   };
 
   var checkSetLocales = function () {
@@ -80,7 +80,7 @@ module.exports = function (json) {
       promises.push(checkSetDir(dir));
     });
 
-    return Promise.all(promises);
+    return Bluebird.all(promises);
   };
 
   return checkSetDir(path.join(process.cwd(), config.translations))

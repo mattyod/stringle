@@ -3,12 +3,12 @@
 var config = require('./config'),
     fs = require('fs'),
     _ = require('underscore'),
-    Promise = require('bluebird'),
+    Bluebird = require('bluebird'),
     log = require('col');
 
 module.exports = function (map) {
   var object = {},
-      defer = Promise.defer();
+      defer = Bluebird.defer();
 
   var build = function (ref, location) {
     var segments = ref.replace(config.open, '')
