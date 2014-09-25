@@ -9,18 +9,17 @@ module.exports = function (src) {
 
   src = path.join(process.cwd(), src);
 
-  var itterate = function (obj) {
-    return fs.readdirAsync(src)
+  var itterate = function (obj, srcPath) {
+    return fs.readdirAsync(srcPath)
       .map(function (file) {
-        var filePath = path.join(src, file);
+        var filePath = path.join(srcPath, file);
 
         return fs.statAsync(filePath)
           .then(function (stat) {
             if (stat.isDirectory()) {
-              src = path.join(src, file);
               obj[file] = {};
 
-              return itterate(obj[file]);
+              return itterate(obj[file], filePath);
             } else if (file[0] !== '.') {
               obj[file] = filePath;
             }
@@ -28,7 +27,7 @@ module.exports = function (src) {
       });
   };
 
-  return itterate(map)
+  return itterate(map, src)
     .then(function () {
       return map;
     })

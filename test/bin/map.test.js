@@ -8,6 +8,9 @@ var expected = {
   test2: path.join(__dirname, '../mockFiles/templates/test2'),
   testFolder: {
     test3: path.join(__dirname, '../mockFiles/templates/testFolder/test3')
+  },
+  testFolder2: {
+    test4: path.join(__dirname, '../mockFiles/templates/testFolder2/test4')
   }
 };
 

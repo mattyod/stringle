@@ -1,6 +1,6 @@
 {
   "name": "stringting",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Tools for building internationalised templates",
   "main": "bin/stringting.js",
   "scripts": {
@@ -23,19 +23,19 @@
   "homepage": "https://github.com/mattyod/stringting",
   "dependencies": {
     "underscore": "1.7.0",
-    "bluebird": "2.2.2",
-    "deep-extend": "0.2.10",
+    "bluebird": "2.3.2",
+    "deep-extend": "0.2.11",
     "col": "0.1.0",
     "rimraf": "2.2.8"
   },
   "devDependencies": {
-    "jshint": "2.5.1",
-    "jscs": "1.5.8",
-    "mocha": "1.20.1",
+    "jshint": "2.5.6",
+    "jscs": "1.6.2",
+    "mocha": "1.21.4",
     "chai": "1.9.1",
-    "sinon": "1.10.2",
+    "sinon": "1.10.3",
     "sinon-chai": "2.5.0",
-    "sinon-as-promised": "0.0.4",
+    "sinon-as-promised": "1.1.0",
     "chai-as-promised": "4.1.1"
   }
 }

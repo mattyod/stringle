@@ -1,11 +1,11 @@
 'use strict';
 
-var Promise = require('bluebird'),
+var Bluebird = require('bluebird'),
     path = require('path'),
     log = require('col'),
     fs = require('fs'),
     _ = require('underscore'),
-    rmrf = Promise.promisify(require('rimraf')),
+    rmrf = Bluebird.promisify(require('rimraf')),
     config = require('./config'),
     checkSetDir = require('./checkSetDir');
 
@@ -64,7 +64,7 @@ module.exports = function (map, files) {
       }
     });
 
-    return Promise.all(promises);
+    return Bluebird.all(promises);
   };
 
   var localise = function () {
@@ -85,7 +85,7 @@ module.exports = function (map, files) {
         })
     );
 
-    return Promise.all(promises);
+    return Bluebird.all(promises);
   };
 
   return localise()

@@ -2,9 +2,9 @@
 
 var path = require('path');
 
-var Promise = require('bluebird');
+var Bluebird = require('bluebird');
 
-Promise.promisifyAll(require('fs'));
+Bluebird.promisifyAll(require('fs'));
 
 global.configPath = path.join(process.cwd(), 'bin/config.js');
 
@@ -14,7 +14,7 @@ global.should = require('chai')
   .use(require('chai-as-promised'))
   .should();
 
-require('sinon-as-promised')(Promise);
+require('sinon-as-promised')(Bluebird);
 
 (function () {
   global.sandbox = function (fn) {
